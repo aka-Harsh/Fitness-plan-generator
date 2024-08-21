@@ -28,3 +28,39 @@ questions = [
     ("How do you usually track your progress?", ["Weight scale", "Body measurements", "Fitness tracker or app", "Visual appearance", "Workout performance (strength, speed, endurance)"]),
     ("Are you looking for a short-term or long-term fitness plan?", ["Short-term (4-8 weeks)", "Medium-term (8-16 weeks)", "Long-term (16+ weeks)"])
 ]
+
+# Function to get a response from the Gemini model
+def get_gemini_response(selected_choices):
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    input_prompt = f"You are a fitness coach based on {selected_choices}, create a personalized fitness plan using all the {selected_choices} to develop the plan."
+    
+    try:
+        response = model.generate_content([input_prompt])
+        response_text = response.text  # Ensure this is the correct attribute
+        st.write("Raw API Response:", response_text)  # Print raw response for debugging
+        return response_text
+    except Exception as e:
+        st.write("Error:", str(e))
+        return "An error occurred while processing the request."
+
+# Streamlit app layout
+st.set_page_config(page_title="Fitness Coach ", layout="wide")
+st.header("Your Personalized Fitness Plan")
+
+# Create columns to display questions side by side
+num_columns = 3  # Number of columns you want
+col_width = 1.0 / num_columns  # Width of each column
+cols = st.columns(num_columns, gap="small")
+
+# Collect responses to the questions
+selected_choices = []
+for idx, (question, opts) in enumerate(questions):
+    col = cols[idx % num_columns]  # Distribute questions across columns
+    with col:
+        choice = st.radio(question, opts, key=idx)
+        selected_choices.append(choice)
+
+# Submit button
+if st.button("Submit for Analysis"):
+    st.subheader("Assessment Result")
+    response = get_gemini_response(selected_choices)

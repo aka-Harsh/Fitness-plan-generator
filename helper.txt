@@ -1,1 +1,30 @@
 
+Welcome,
+
+To run this project please follow the following instructions:
+
+1. Clone this repository using the cmd 
+git clone
+
+2. Once the program is cloned sucessfully open the terminal and navigate to the project
+
+3. You can wish to delete the venv file to create your own virtual envirnment to run the project. 
+
+4. To create a new virtual environment use the cmd
+conda create -p venv python==3.10 -y
+
+5. Now to activate this virtual envirnment use the cmd
+conda activate venv/
+
+6. Now you need to download all the libraries in the requirements file so use the cmd
+pip install -r requirements.txt
+
+7. Now go to any browser and pase the link given below
+https://aistudio.google.com/app/apikey
+
+8. Generate a new API key and copy it somewhere
+
+9. Go to your .env file in project and replace [Your_Key] with your Generated key.
+
+10. Now you are ready so save everything and navigate to the terminal and run the cmd 
+streamlit run app.py

@@ -2,6 +2,8 @@
 This project contains a Fitness plan generator built using the integration of LLM models Google Gemini.<br><br>
 
 ----Project Outlook----<br><br>
+A fitness plan generator and feedback tool utilizing the Google Gemini (Gemini-1.5-Flash) model. For detailed information and instructions, please refer to the helper file.😊
+<br>
 1. Running app.py file ![Screenshot 2024-08-21 210843](https://github.com/user-attachments/assets/ebaa518f-3636-43a2-a244-3ecb6c411550)
 2. Running app.py file ![Screenshot 2024-08-21 210916](https://github.com/user-attachments/assets/a79d8fae-f13e-4002-a967-fa0fb3778aee)
 3. Results Generation ![Screenshot 2024-08-21 210939](https://github.com/user-attachments/assets/2929588e-f73d-428f-85c7-81c140e8d7e0)

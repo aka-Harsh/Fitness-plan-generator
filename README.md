@@ -14,14 +14,14 @@
 
 🎥 Here you can find a video of the working project
 
-https://stock-price-predictor-9yes3rhwbjwjveqmvzx73v.streamlit.app/
+https://github.com/user-attachments/assets/b6fa007e-0584-45b9-b1d4-17c54b820f62
 
 
 ## Prerequisites 
 
 👇 Locate to your .env file and paste your Google Gemini API key
 
-https://ai.google.dev/gemini-api/docs/api-key
+[Get your API key](https://ai.google.dev/gemini-api/docs/api-key)
 
 ## Deployment
 

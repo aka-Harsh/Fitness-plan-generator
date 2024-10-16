@@ -12,38 +12,38 @@
 
 ## Video Demo
 
-🎥 Here you can find a video of the working project
+🎥 Here you can find a video of the working project.
 
 https://github.com/user-attachments/assets/b6fa007e-0584-45b9-b1d4-17c54b820f62
 
 
 ## Prerequisites 
 
-👇 Locate to your .env file and paste your Google Gemini API key
+👇 Locate to your .env file and paste your Google Gemini API key.
 
 [Get your API key](https://ai.google.dev/gemini-api/docs/api-key)
 
 ## Deployment
 
-To run this project first clone this repository using
+To run this project first clone this repository using:
 
 
 ```bash
   https://github.com/aka-Harsh/Fitness-plan-generator.git
 ```
-Locate this repository using command prompt and then create a virtual enviroment and activate it
+Locate this repository using command prompt and then create a virtual enviroment and activate it:
 
 ```bash
   conda create -n fit_gen python=3.8
   conda activate fit_gen
 ```
-Install all the required packages 
+Install all the required packages:
 ```bash
   pip install -r requirements.txt
 ```
 
 
-Finally run the app.py file
+Finally run the app.py file:
 ```bash
   streamlit run app.py
 ```
